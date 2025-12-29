@@ -6,12 +6,17 @@ namespace Submission.Persistence;
 public class SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) : DbContext(options)
 {
     #region Entities
+<<<<<<< HEAD
     public virtual DbSet<Journal> Journals { get; set; }
     public virtual DbSet<Article> Articles { get; set; }
+=======
+    public DbSet<Journal> Journals { get; set; }
+    public DbSet<Article> Articles { get; set; }
 		public DbSet<Person> Persons { get; set; }
 		public DbSet<Author> Authors { get; set; }
 		public DbSet<ArticleActor> ArtocleActors { get; set; }
 		#endregion
+>>>>>>> ee1e286 ([Submission] CreateArticle - AssignCorrespondingAuthor)
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -19,4 +24,8 @@ public class SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) 
 
         modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
     }
+<<<<<<< HEAD
+    #endregion
+=======
+>>>>>>> ee1e286 ([Submission] CreateArticle - AssignCorrespondingAuthor)
 }

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Domain", "BuildingBl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.MediatR", "BuildingBlocks\Blocks.MediatR\Blocks.MediatR.csproj", "{67D788A9-3A0B-424E-B48C-5EC1E9DD9960}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Exceptions", "BuildingBlocks\Blocks.Exceptions\Blocks.Exceptions.csproj", "{C30A1C72-89DF-4FDB-BF2D-5005EB1A7A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Core", "BuildingBlocks\Blocks.Core\Blocks.Core.csproj", "{D36CA688-6631-45BF-A7AA-C0F886A0D483}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{67D788A9-3A0B-424E-B48C-5EC1E9DD9960}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D788A9-3A0B-424E-B48C-5EC1E9DD9960}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D788A9-3A0B-424E-B48C-5EC1E9DD9960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30A1C72-89DF-4FDB-BF2D-5005EB1A7A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30A1C72-89DF-4FDB-BF2D-5005EB1A7A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30A1C72-89DF-4FDB-BF2D-5005EB1A7A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30A1C72-89DF-4FDB-BF2D-5005EB1A7A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36CA688-6631-45BF-A7AA-C0F886A0D483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36CA688-6631-45BF-A7AA-C0F886A0D483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36CA688-6631-45BF-A7AA-C0F886A0D483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36CA688-6631-45BF-A7AA-C0F886A0D483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +89,8 @@ Global
 		{6DBC16CF-FB49-4AD2-A12F-10505B3CCAB3} = {40AEA9B2-FCE0-422B-9EBF-AAFBB1845C98}
 		{A33DB3F5-323D-4505-8378-D0020A158771} = {40AEA9B2-FCE0-422B-9EBF-AAFBB1845C98}
 		{67D788A9-3A0B-424E-B48C-5EC1E9DD9960} = {40AEA9B2-FCE0-422B-9EBF-AAFBB1845C98}
+		{C30A1C72-89DF-4FDB-BF2D-5005EB1A7A9E} = {40AEA9B2-FCE0-422B-9EBF-AAFBB1845C98}
+		{D36CA688-6631-45BF-A7AA-C0F886A0D483} = {40AEA9B2-FCE0-422B-9EBF-AAFBB1845C98}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F9D327F-9230-4EE9-ADB2-278BD5BAF08B}

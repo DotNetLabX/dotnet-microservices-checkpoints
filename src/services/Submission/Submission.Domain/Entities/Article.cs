@@ -3,7 +3,7 @@ using Blocks.Domain.Entities;
 
 namespace Submission.Domain.Entities;
 
-public class Article : IEntity
+public partial class Article : IEntity
 {
     public int Id { get; init; }
     public required string Title { get; set; }
@@ -14,4 +14,6 @@ public class Article : IEntity
 
     public int JournalId { get; set; }
     public required Journal Journal { get; set; }
+
+    public List<ArticleActor> Actors { get; set; } = new();
 }

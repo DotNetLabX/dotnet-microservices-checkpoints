@@ -27,7 +27,7 @@ public class Repository<TContext, TEntity> : IRepository<TEntity>
 				_entity = _dbContext.Set<TEntity>();
 		}
 
-		public TContext GetContext() => _dbContext;
+		public TContext Context => _dbContext;
 		public virtual DbSet<TEntity> Entity => _entity;
 
 		protected virtual IQueryable<TEntity> Query() => _entity.AsQueryable();
