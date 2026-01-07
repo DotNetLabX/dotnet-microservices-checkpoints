@@ -4,10 +4,14 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
+  </PropertyGroup>	
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="12.1.1" />
+	   <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>	
+
+  <ItemGroup>
+    <ProjectReference Include="..\Articles.Abstractions\Articles.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

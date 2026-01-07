@@ -9,26 +9,29 @@ namespace Submission.Application;
 
 public static class DependencyInjection
 {
+<<<<<<< HEAD
 		public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
 		{
-<<<<<<< HEAD
-				services
-						.AddValidatorsFromAssemblyContaining<CreateArticleCommandValiator>()
-						.AddMediatR(config => 
-						{
-								config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-								config.AddOpenBehavior(typeof(ValidationBehavior<,>));
-=======
 			services
 				.AddValidatorsFromAssemblyContaining<CreateArticleCommandValiator>()
 				.AddMediatR(config => 
 				{
 					config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-					config.AddBehavior(typeof(ValidationBehavior<,>));
-                    config.AddBehavior(typeof(SetUserIdBehavior<,>));
->>>>>>> ee1e286 ([Submission] CreateArticle - AssignCorrespondingAuthor)
+								config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+                    config.AddOpenBehavior(typeof(SetUserIdBehavior<,>));
+=======
+	public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
+	{
+		services
+			.AddValidatorsFromAssemblyContaining<CreateArticleCommandValiator>()
+			.AddMediatR(config => 
+			{
+				config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+				config.AddBehavior(typeof(ValidationBehavior<,>));
+				config.AddBehavior(typeof(SetUserIdBehavior<,>));
+>>>>>>> 4804d18 ([Submission] AssignAuthor)
 
-                });
-			return services; 
-		}
+			});
+		return services; 
+	}
 }
