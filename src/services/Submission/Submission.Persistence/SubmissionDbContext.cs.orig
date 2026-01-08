@@ -9,23 +9,26 @@ public class SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) 
 <<<<<<< HEAD
     public virtual DbSet<Journal> Journals { get; set; }
     public virtual DbSet<Article> Articles { get; set; }
-=======
-    public DbSet<Journal> Journals { get; set; }
-    public DbSet<Article> Articles { get; set; }
 		public DbSet<Person> Persons { get; set; }
 		public DbSet<Author> Authors { get; set; }
 		public DbSet<ArticleActor> ArtocleActors { get; set; }
 		#endregion
->>>>>>> ee1e286 ([Submission] CreateArticle - AssignCorrespondingAuthor)
+=======
+    public DbSet<Journal> Journals { get; set; }
+    public DbSet<Article> Articles { get; set; }
+	public DbSet<Person> Persons { get; set; }
+	public DbSet<Author> Authors { get; set; }
+	public DbSet<ArticleActor> ArticleActors { get; set; }
+>>>>>>> 643a2d5 ([Submission] UploadManuscriptFile)
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public DbSet<Asset> Assets { get; set; }
+    public DbSet<AssetTypeDefinition> AssetTypes{ get; set; }
+    #endregion
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
     }
-<<<<<<< HEAD
-    #endregion
-=======
->>>>>>> ee1e286 ([Submission] CreateArticle - AssignCorrespondingAuthor)
 }

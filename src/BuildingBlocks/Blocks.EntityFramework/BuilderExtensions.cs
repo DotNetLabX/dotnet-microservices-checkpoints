@@ -14,16 +14,16 @@ public static class BuilderExtensions
             value => (TEnum)Enum.Parse(typeof(TEnum), value));
     }
 
-		public static PropertyBuilder<T> HasJsonCollectionConversion<T>(this PropertyBuilder<T> builder)
-				=> builder.HasConversion(BuildJsonListConvertor<T>());
+	public static PropertyBuilder<T> HasJsonCollectionConversion<T>(this PropertyBuilder<T> builder)
+		=> builder.HasConversion(BuildJsonListConvertor<T>());
 
-		public static ValueConverter<TCollection, string> BuildJsonListConvertor<TCollection>()
-		{
-				Func<TCollection, string> serializeFunc = v => JsonSerializer.Serialize(v);
-				Func<string, TCollection> deserializeFunc = v => JsonSerializer.Deserialize<TCollection>(v ?? "[]")!;
+	public static ValueConverter<TCollection, string> BuildJsonListConvertor<TCollection>()
+	{
+		Func<TCollection, string> serializeFunc = v => JsonSerializer.Serialize(v);
+		Func<string, TCollection> deserializeFunc = v => JsonSerializer.Deserialize<TCollection>(v ?? "[]")!;
 
-				return new ValueConverter<TCollection, string>(
-						v => serializeFunc(v),
-						v => deserializeFunc(v));
-		}
+		return new ValueConverter<TCollection, string>(
+			v => serializeFunc(v),
+			v => deserializeFunc(v));
+	}
 }

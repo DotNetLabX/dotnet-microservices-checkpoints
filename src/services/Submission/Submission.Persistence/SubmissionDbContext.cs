@@ -8,12 +8,15 @@ public class SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) 
     #region Entities
     public virtual DbSet<Journal> Journals { get; set; }
     public virtual DbSet<Article> Articles { get; set; }
-		public DbSet<Person> Persons { get; set; }
-		public DbSet<Author> Authors { get; set; }
-		public DbSet<ArticleActor> ArtocleActors { get; set; }
-		#endregion
+	public DbSet<Person> Persons { get; set; }
+	public DbSet<Author> Authors { get; set; }
+	public DbSet<ArticleActor> ArticleActors { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public virtual DbSet<Asset> Assets { get; set; }
+    public virtual DbSet<AssetTypeDefinition> AssetTypes{ get; set; }
+    #endregion
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 

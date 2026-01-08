@@ -12,7 +12,7 @@ internal class ArticleEntityConfiguration : EntityConfiguration<Article>
     {
         base.Configure(builder);
 
-				builder.Property(e => e.Title).HasMaxLength(256).IsRequired();
+		builder.Property(e => e.Title).HasMaxLength(256).IsRequired();
         builder.Property(e => e.Scope).HasMaxLength(2048).IsRequired();
 
         builder.Property(e => e.Stage).HasEnumConversion().IsRequired();
@@ -22,5 +22,10 @@ internal class ArticleEntityConfiguration : EntityConfiguration<Article>
             .HasForeignKey(e => e.JournalId)
             .IsRequired()
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasMany(e => e.Assets).WithOne(e => e.Article)
+            .HasForeignKey(e => e.ArticleId)
+            .IsRequired()
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
