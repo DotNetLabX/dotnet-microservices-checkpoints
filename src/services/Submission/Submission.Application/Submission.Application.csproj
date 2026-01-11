@@ -16,6 +16,7 @@
     <ProjectReference Include="..\..\..\BuildingBlocks\Articles.Abstractions\Articles.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Exceptions\Blocks.Exceptions.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.MediatR\Blocks.MediatR.csproj" />
+    <ProjectReference Include="..\..\..\Modules\FileStorage.Contracts\FileStorage.Contracts.csproj" />
     <ProjectReference Include="..\Submission.Persistence\Submission.Persistence.csproj" />
   </ItemGroup>
 

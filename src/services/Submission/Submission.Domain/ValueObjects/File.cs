@@ -1,6 +1,6 @@
 ﻿namespace Submission.Domain.ValueObjects;
 
-public class File
+public partial class File
 {
     public required string OriginalName { get; init; } = default!;
     public required string FileServerId { get; init; } = default!;
