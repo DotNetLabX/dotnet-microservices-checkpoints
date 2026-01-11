@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Text.Json;
 
@@ -26,4 +27,7 @@ public static class BuilderExtensions
 			v => serializeFunc(v),
 			v => deserializeFunc(v));
 	}
+
+    public static PropertyBuilder<TProperty> HasColumnNameSameAsProperty<TProperty>(this PropertyBuilder<TProperty> builder)
+        => builder.HasColumnName(builder.Metadata.PropertyInfo?.Name);
 }

@@ -1,0 +1,11 @@
+﻿using Articles.Abstractions.Enums;
+using Blocks.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+
+namespace Auth.Domain.Roles;
+
+public class Role : IdentityRole<int>, IEntity
+{
+    public required UserRoleType Type { get; init; }
+    public required string Description { get; set; }
+}
