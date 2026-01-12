@@ -11,7 +11,7 @@
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Core\Blocks.Core.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Domain\Blocks.Domain.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Exceptions\Blocks.Exceptions.csproj" />
-    <ProjectReference Include="..\..\..\Modules\FileStorage.Contracts\FileStorage.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\Modules\FileStorage\FileStorage.Contracts\FileStorage.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

@@ -35,9 +35,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3AD8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileStorage", "FileStorage", "{A36F7FE4-F74A-4F8D-9765-A5C374B15449}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.Contracts", "Modules\FileStorage.Contracts\FileStorage.Contracts.csproj", "{45D330D0-F520-4D23-BF89-1D2EFDFDC978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.Contracts", "Modules\FileStorage\FileStorage.Contracts\FileStorage.Contracts.csproj", "{45D330D0-F520-4D23-BF89-1D2EFDFDC978}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.MongoGridFS", "Modules\FileStorage.MongoGridFS\FileStorage.MongoGridFS.csproj", "{0435475A-55F7-4D26-BCEE-15E699F9D304}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.MongoGridFS", "Modules\FileStorage\FileStorage.MongoGridFS\FileStorage.MongoGridFS.csproj", "{0435475A-55F7-4D26-BCEE-15E699F9D304}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{30660DD1-A15D-4B78-84DC-7C23D5DCB004}"
 EndProject
