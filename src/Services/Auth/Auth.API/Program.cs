@@ -1,4 +1,5 @@
 using Auth.API;
+using Auth.Application;
 using Auth.Persistence;
 using FastEndpoints;
 using FastEndpoints.Swagger;
@@ -11,6 +12,7 @@ builder.Services
 #region Add Services 
 builder.Services
     .AddApiServices(builder.Configuration)
+    .AddApplicationServices(builder.Configuration)
     .AddPersistenceServices(builder.Configuration);
 
 #endregion
