@@ -1,0 +1,13 @@
+﻿using FastEndpoints;
+using FluentValidation;
+
+namespace Auth.API.Features.Login;
+
+public class LoginCommandValidator : Validator<LoginCommand>
+{
+    public LoginCommandValidator()
+    {
+        RuleFor(c => c.Email).NotEmpty().EmailAddress();
+        RuleFor(c => c.Password).NotEmpty();
+    }
+}
