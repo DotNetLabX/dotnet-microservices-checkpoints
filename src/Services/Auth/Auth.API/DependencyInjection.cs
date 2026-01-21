@@ -23,8 +23,6 @@ public static class DependenciesConfiguration
         services
             .AddFastEndpoints()
             .SwaggerDocument()
-            .AddEndpointsApiExplorer()
-            .AddSwaggerGen()
             .AddJwtAuthentication(config)
             .AddJwtIdentity(config)
             .AddAuthorization();
