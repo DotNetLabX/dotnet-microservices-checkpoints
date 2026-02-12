@@ -1,5 +1,5 @@
 ﻿using Articles.Abstractions.Enums;
-using Blocks.EntityFramework;
+using Blocks.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Submission.Domain.Entities;

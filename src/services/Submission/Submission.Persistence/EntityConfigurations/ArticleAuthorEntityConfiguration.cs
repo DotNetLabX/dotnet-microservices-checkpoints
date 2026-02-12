@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Submission.Domain.Entities;
-using Blocks.EntityFramework;
+using Blocks.EntityFrameworkCore;
 
 public class ArticleAuthorEntityConfiguration : IEntityTypeConfiguration<ArticleAuthor>
 {

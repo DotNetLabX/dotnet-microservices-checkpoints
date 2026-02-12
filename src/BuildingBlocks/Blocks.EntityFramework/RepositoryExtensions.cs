@@ -2,7 +2,7 @@
 using Blocks.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blocks.EntityFramework;
+namespace Blocks.EntityFrameworkCore;
 
 public static class RepositoryExtensions
 {

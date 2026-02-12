@@ -6,10 +6,11 @@ using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using Articles.Security;
+using Auth.API.Features.Persons;
 
 namespace Auth.API;
 
-public static class DependenciesConfiguration
+public static class DependencyInjection
 {
     public static IServiceCollection ConfigureApiOptions(this IServiceCollection services, IConfiguration configuration)
     {
@@ -28,6 +29,8 @@ public static class DependenciesConfiguration
             .AddAuthorization();
 
         services.AddSmtpEmailService(config);
+
+        services.AddSingleton<GrpcTypeAdapterConfig>();
 
         return services;
     }
