@@ -1,5 +1,5 @@
 ﻿using Articles.Abstractions.Enums;
-using Blocks.EntityFramework;
+using Blocks.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Submission.Domain.Entities;
 

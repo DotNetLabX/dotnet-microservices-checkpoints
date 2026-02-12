@@ -6,7 +6,7 @@ using Auth.Domain.Users.Events;
 using Auth.Domain.Users;
 using FastEndpoints;
 
-namespace Auth.API.Features.CreateUser;
+namespace Auth.API.Features.Users.CreateUser;
 
 public class SendConfirmationEmailOnUserCreatedHandler
     (IEmailService emailService, IHttpContextAccessor httpContextAccessor, IOptions<EmailOptions> emailOptions)
@@ -30,9 +30,9 @@ public class SendConfirmationEmailOnUserCreatedHandler
 
         return new EmailMessage(
             "Your Account Has Been Created – Set Your Password",
-            new Content(ContentType.Html, string.Format(ConfirmationEmail, user.FullName, resetLink)),
+            new Content(ContentType.Html, string.Format(ConfirmationEmail, user.Person.FullName, resetLink)),
             new EmailAddress("articles", fromEmailAddress),
-            new List<EmailAddress> { new EmailAddress(user.FullName, user.Email!) }
+            new List<EmailAddress> { new EmailAddress(user.Person.FullName, user.Email!) }
             );
     }
 }

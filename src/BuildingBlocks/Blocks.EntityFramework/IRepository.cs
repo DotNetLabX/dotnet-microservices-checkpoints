@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Blocks.EntityFramework;
+namespace Blocks.EntityFrameworkCore;
 
 public interface IRepository<TEntity>
 		where TEntity : class, IEntity

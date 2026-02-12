@@ -1,4 +1,5 @@
 using Auth.API;
+using Auth.API.Features.Persons;
 using Auth.Application;
 using Auth.Persistence;
 using FastEndpoints;
@@ -25,6 +26,8 @@ app
     .UseFastEndpoints()
     .UseSwaggerGen()
     ;
+
+app.MapGrpcService<PersonGrpcService>();
 #endregion
 
 app.Run();

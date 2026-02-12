@@ -1,4 +1,4 @@
-﻿namespace Auth.Domain.Users.Enums;
+﻿namespace Articles.Abstractions.Enums;
 
 public enum Honorific
 {

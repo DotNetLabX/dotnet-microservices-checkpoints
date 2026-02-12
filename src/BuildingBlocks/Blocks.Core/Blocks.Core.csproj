@@ -18,4 +18,8 @@
 		<PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="9.0.11" />
 	</ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Blocks.Exceptions\Blocks.Exceptions.csproj" />
+  </ItemGroup>
+
 </Project>

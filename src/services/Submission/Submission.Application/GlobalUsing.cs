@@ -5,7 +5,7 @@ global using FluentValidation;
 // Internal libraries
 global using Blocks.Core;
 global using Blocks.MediatR;
-global using Blocks.EntityFramework;
+global using Blocks.EntityFrameworkCore;
 global using Articles.Abstractions;
 global using Articles.Abstractions.Enums;
 
@@ -21,7 +21,7 @@ global using Submission.Application.Features.Shared;
 global using Submission.Persistence;
 global using Submission.Persistence.Repositories;
 
-global using AssetTypeDefinitionRepository = Blocks.EntityFramework.CachedRepository<
+global using AssetTypeDefinitionRepository = Blocks.EntityFrameworkCore.CachedRepository<
         Submission.Persistence.SubmissionDbContext,
         Submission.Domain.Entities.AssetTypeDefinition,
         Articles.Abstractions.Enums.AssetType>;
