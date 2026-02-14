@@ -11,4 +11,10 @@
 		    <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <PackageReference Include="Grpc.Net.Client" Version="2.76.0" />
+      <PackageReference Include="protobuf-net.Grpc" Version="1.2.2" />
+    </ItemGroup>
+
 </Project>

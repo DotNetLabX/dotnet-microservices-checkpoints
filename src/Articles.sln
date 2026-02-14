@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{02
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Submission", "Submission", "{EEA7686E-74E5-41B8-9E17-3536F6678F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Submission.API", "services\Submission\Submission.API\Submission.API.csproj", "{DB55BA0B-BC79-431E-AAAB-C616F65CB3B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Submission.Api", "services\Submission\Submission.API\Submission.Api.csproj", "{DB55BA0B-BC79-431E-AAAB-C616F65CB3B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Submission.Application", "services\Submission\Submission.Application\Submission.Application.csproj", "{6C816062-0FFB-48EE-B7C1-E39C4D9D62C8}"
 EndProject

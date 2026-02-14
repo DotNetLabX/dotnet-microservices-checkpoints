@@ -17,10 +17,13 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\Articles.Abstractions\Articles.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Articles.Grpc.Contracts\Articles.Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Articles.Security\Articles.Security.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.AspNetCore\Blocks.AspNetCore.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Core\Blocks.Core.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Exceptions\Blocks.Exceptions.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\Blocks.Redis\Blocks.Redis.csproj" />
     <ProjectReference Include="..\Journals.Domain\Journals.Domain.csproj" />
+    <ProjectReference Include="..\Journals.Persistence\Journals.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
