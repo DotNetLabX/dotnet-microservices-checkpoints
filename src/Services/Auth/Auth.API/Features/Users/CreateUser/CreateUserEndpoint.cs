@@ -1,11 +1,9 @@
-﻿using Articles.Abstractions.Enums;
+﻿using Articles.Security;
 using Auth.Domain.Persons;
-using Auth.Domain.Users;
 using Auth.Domain.Users.Events;
 using Auth.Persistence;
 using Auth.Persistence.Repositories;
 using Blocks.Exceptions;
-using FastEndpoints;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 

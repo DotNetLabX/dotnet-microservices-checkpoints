@@ -1,5 +1,5 @@
 ﻿using Articles.Abstractions;
-using Articles.Abstractions.Enums;
+using Articles.Security;
 using Auth.Grpc;
 using Blocks.Exceptions;
 using Blocks.Redis;
@@ -9,7 +9,6 @@ using Journals.Domain.Journals;
 using Journals.Domain.Journals.Events;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
-using ProtoBuf.Grpc;
 
 namespace Journals.Api.Features.Journals.Create;
 
