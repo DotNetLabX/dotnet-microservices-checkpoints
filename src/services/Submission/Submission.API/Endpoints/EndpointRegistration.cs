@@ -1,4 +1,6 @@
-﻿namespace Submission.API.Endpoints;
+﻿using Submission.Api.Endpoints;
+
+namespace Submission.API.Endpoints;
 
 public static class EndpointRegistration
 {
@@ -7,6 +9,7 @@ public static class EndpointRegistration
         CreateArticleEndpoint.Map(app);
         AssignAuthorEndpoint.Map(app);
         CreateAndAssignAuthorEndpoint.Map(app);
+        SubmitArticleEndpoint.Map(app);
         UploadManuscriptFileEndpoint.Map(app);
 
         return app;

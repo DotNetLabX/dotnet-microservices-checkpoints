@@ -5,6 +5,16 @@ namespace Submission.Domain.Entities;
 
 public partial class Article
 {
+    public void Submit(IArticleAction<ArticleActionType> action)
+    {
+        // uncomment those lines when we have the AuditedEntity abstractization
+        //SubmittedById = action.CreatedById;
+        //SubmittedOn = action.CreatedOn;
+
+        // todo add an ArticleSubmitted domain event
+
+    }
+
     public void AssignAuthor(Author author, HashSet<ContributionArea> contributionAreas, bool isCorrespondingAuthor)
     {
         var role = isCorrespondingAuthor ? UserRoleType.CORAUT : UserRoleType.AUT;
@@ -16,7 +26,7 @@ public partial class Article
         {
             ContributionAreas = contributionAreas,
             Person = author,
-            //PersonId = author.Id, 
+            //PersonId = author.Id,
             Role = role
         });
 
