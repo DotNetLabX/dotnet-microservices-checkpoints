@@ -2,7 +2,7 @@
 
 namespace Submission.Domain.Entities;
 
-public class Person : Entity
+public partial class Person : Entity
 {
 	public required string FirstName { get; init; }
 	public required string LastName { get; init; }
@@ -10,7 +10,7 @@ public class Person : Entity
 	public string FullName => FirstName + " " + LastName;
 
 	public string? Title { get; init; }
-	public required EmailAddress EmailAddress { get; init; }
+	public required EmailAddress Email { get; init; }
 	public required string Affiliation { get; init; }
 		 
 	public int? UserId { get; set; }

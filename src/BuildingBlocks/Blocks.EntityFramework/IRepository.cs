@@ -35,7 +35,8 @@ public class Repository<TContext, TEntity> : IRepository<TEntity>
 		public async Task<TEntity?> FindByIdAsync(int id) => await _entity.FindAsync(id);
 		public async Task<TEntity?> GetByIdAsync(int id) => await Query().FirstOrDefaultAsync(e => e.Id == id);
 
-		public async Task<TEntity> AddAsync(TEntity entity) => (await _entity.AddAsync(entity)).Entity;
+		public async Task<TEntity> AddAsync(TEntity entity, CancellationToken ct = default) 
+			=> (await _entity.AddAsync(entity, ct)).Entity;
 
 		public void Update(TEntity entity) => _entity.Update(entity);
 		public void Remove(TEntity entity) =>  _entity.Remove(entity);

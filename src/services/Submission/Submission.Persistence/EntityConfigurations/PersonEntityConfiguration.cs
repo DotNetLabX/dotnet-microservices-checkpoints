@@ -24,7 +24,7 @@ internal class PersonEntityConfiguration : EntityConfiguration<Person>
 						.HasComment("Institution or organization they are associated with when they conduct their research.");
 
 				builder.ComplexProperty(
-					 o => o.EmailAddress, builder =>
+					 o => o.Email, builder =>
 					 {
 							 builder.Property(n => n.Value)
 									 .HasColumnName(builder.Metadata.PropertyInfo!.Name)

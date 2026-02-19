@@ -20,7 +20,7 @@ public partial class Article
         var role = isCorrespondingAuthor ? UserRoleType.CORAUT : UserRoleType.AUT;
 
         if (Actors.Exists(a => a.PersonId == author.Id && a.Role == role))
-            throw new DomainException($"Author {author.EmailAddress} is already assigned to the article");
+            throw new DomainException($"Author {author.Email} is already assigned to the article");
 
         Actors.Add(new ArticleAuthor()
         {
@@ -46,5 +46,15 @@ public partial class Article
         _assets.Add(asset);
 
         return asset;
+    }
+
+    public void Approve(Person editor, IArticleAction<ArticleActionType> action)
+    {
+        Actors.Add(new ArticleActor
+        {
+            Person = editor,
+            Role = UserRoleType.REVED
+        });
+
     }
 }
