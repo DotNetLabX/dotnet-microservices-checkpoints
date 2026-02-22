@@ -1,10 +1,14 @@
-﻿using FileStorage.MongoGridFS;
+﻿using Auth.Grpc;
+using Blocks.AspNetCore.Grpc;
+using Blocks.Core;
+using FileStorage.MongoGridFS;
+using Journals.Grpc;
 
 namespace Submission.API;
 
 public static class DependencyInjection
 {
-	public static IServiceCollection AddAPIServices(this IServiceCollection services, IConfiguration configuration)
+	public static IServiceCollection AddAPIServices(this IServiceCollection services, IConfiguration config)
 	{
 		services
 			.AddMemoryCache()
@@ -13,8 +17,14 @@ public static class DependencyInjection
 			;
 		// Add API specific services here
 
-		services.AddMongoFileStorage(configuration);
+		services.AddMongoFileStorage(config);
 
-		return services;
+
+        //grpc Services
+        var grpcOptions = config.GetSectionByTypeName<GrpcServicesOptions>();
+        services.AddCodeFirstGrpcClient<IPersonService>(grpcOptions, "Person");
+        services.AddCodeFirstGrpcClient<IJournalService>(grpcOptions, "Journal");
+
+        return services;
 	}
 }

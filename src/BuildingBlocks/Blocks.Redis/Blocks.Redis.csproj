@@ -10,4 +10,8 @@
     <PackageReference Include="Redis.OM" Version="1.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Blocks.Exceptions\Blocks.Exceptions.csproj" />
+  </ItemGroup>
+
 </Project>

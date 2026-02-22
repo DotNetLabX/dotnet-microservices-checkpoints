@@ -4,7 +4,10 @@
       "Bash(git commit:*)",
       "Bash(git rebase:*)",
       "Bash(GIT_SEQUENCE_EDITOR=\"sed -i ''s/^pick /edit /''\" git rebase -i --onto c24c848 f56636f 3f33b4d)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(claude update)",
+      "WebSearch",
+      "Bash(claude config list-models:*)"
     ]
   }
 }

@@ -7,6 +7,8 @@ using System.Text.Json.Serialization;
 using Blocks.Mapster;
 using Blocks.AspNetCore.Grpc;
 using Auth.Grpc;
+using ProtoBuf.Grpc.Server;
+using System.IO.Compression;
 
 namespace Journals.Api;
 
@@ -34,6 +36,13 @@ public static class DependencyInjection
             .AddJwtAuthentication(config)
             .AddMapster()
             .AddAuthorization();
+
+        // Grpc server
+        services.AddCodeFirstGrpc(options =>
+        {
+            options.ResponseCompressionLevel = CompressionLevel.Fastest;
+            options.EnableDetailedErrors = true;
+        });
 
         // Grpc clients
         var grpcOptions = config.GetSectionByTypeName<GrpcServicesOptions>();

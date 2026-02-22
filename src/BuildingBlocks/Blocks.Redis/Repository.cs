@@ -17,6 +17,8 @@ public class Repository<T>
 
 
     public async Task<T?> GetByIdAsync(int id) => await _collection.FindByIdAsync(id.ToString());
+    public async Task<T> GetByIdOrThrowAsync(int id) => await _collection.GetByIdOrThrowAsync(id);
+
     public T? GetById(int id) => _collection.FindById(id.ToString());
     public async Task<IEnumerable<T>> GetAllAsync() => await _collection.ToListAsync();
 

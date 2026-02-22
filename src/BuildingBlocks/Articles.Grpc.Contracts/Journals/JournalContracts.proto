@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Journals.Grpc";
+
+package journals;
+
+service JournalService
+{
+	rpc GetJournalById (GetJournalByIdRequest) returns (GetJournalResponse);
+	rpc IsEditorAssignedToJournal (IsEditorAssignedToJournalRequest) returns (IsEditorAssignedToJournalResponse);
+}
+
+message IsEditorAssignedToJournalRequest
+{
+  int32 journal_id = 1;
+  int32 user_id = 2;
+}
+
+message IsEditorAssignedToJournalResponse
+{
+  bool is_assigned = 1;
+}
